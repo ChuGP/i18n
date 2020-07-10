@@ -1,0 +1,16 @@
+{
+    "MORE": "法人・学生",
+    "RIGHT_BAR": "サイトに関するフィードバック",
+    "SUB_BAR": {
+      "BLUE_TITLE": {
+        "MICROSOFT_SUPPORT": "サポート"
+      },
+      "GRAY_TITLE": {
+        "WELCOME_TO_MICROSOFT_SUPPORT": "Microsoft サポートへようこそ"
+      },
+      "MENU_TITLE": {
+        "WHAT_DO_YOU_NEED_HELP_WITH": "どのようなことに関するヘルプが必要ですか?"
+      }
+    },
+    "SIGN_IN": "サインイン"
+}

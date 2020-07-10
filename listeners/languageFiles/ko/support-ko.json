@@ -1,0 +1,16 @@
+{
+    "MORE": "더 알아보기",
+    "RIGHT_BAR": "Site feedback",
+    "SUB_BAR": {
+      "BLUE_TITLE": {
+        "MICROSOFT_SUPPORT": "지원"
+      },
+      "GRAY_TITLE": {
+        "WELCOME_TO_MICROSOFT_SUPPORT": "Microsoft 지원 시작"
+      },
+      "MENU_TITLE": {
+        "WHAT_DO_YOU_NEED_HELP_WITH": "어떤 도움이 필요하신가요?"
+      }
+    },
+    "SIGN_IN": "로그인"
+}

@@ -1,0 +1,27 @@
+{
+    "SOFTWARE":"軟體",
+    "PCS_AND_DEVICES":"個人電腦和設備",
+    "ENTERTAINMENT": "娛樂",
+    "BUSINESS": "商務適用",
+    "DEVELOPER_AND_IT": "Developer & IT",
+    "OTHER": "其他",
+    "SUB_PCS_AND_DEVICES": {
+      "PCS_AND_TABLES": "PCs & tablets",
+      "ACCESSORIES": "電腦配件"
+    },
+    "SUB_ENTERTAINMENT": {
+      "XBOX_GAMES": "Xbox games",
+      "PC_GAMES": "遊戲",
+      "WINDOWS_DIGITAL_GAMES": "Windows 遊戲",
+      "MOVIES_AND_TV": ""
+    },
+    "SUB_BUSINESS": {
+      "DADA_PLATFORM": "資料平台"
+    },
+    "SUB_DEVELOPER_AND_IT": {
+      "WINDOWS_DEV_CENTER": "開發 Windows 應用程式"
+    },
+    "SUB_OTHER": {
+      "FREE_DOWNLOADS_AND_SECURITY": "免費下載與安全性"
+    }
+  }

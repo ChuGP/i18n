@@ -1,0 +1,16 @@
+{
+    "MORE": "更多",
+    "RIGHT_BAR": "站点反馈",
+    "SUB_BAR": {
+      "BLUE_TITLE": {
+        "MICROSOFT_SUPPORT": "支持"
+      },
+      "GRAY_TITLE": {
+        "WELCOME_TO_MICROSOFT_SUPPORT": "欢迎访问 Microsoft 支持"
+      },
+      "MENU_TITLE": {
+        "WHAT_DO_YOU_NEED_HELP_WITH": "你需要哪些方面的帮助？"
+      }
+    },
+    "SIGN_IN": "登录"
+}

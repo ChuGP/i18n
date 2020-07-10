@@ -1,0 +1,27 @@
+{
+    "SOFTWARE":"ソフトウェア",
+    "PCS_AND_DEVICES":"PC とデバイス",
+    "ENTERTAINMENT": "エンタメ",
+    "BUSINESS": "法人向け",
+    "DEVELOPER_AND_IT": "Developer & IT",
+    "OTHER": "その他",
+    "SUB_PCS_AND_DEVICES": {
+      "PCS_AND_TABLES": "PCs & tablets",
+      "ACCESSORIES": "アクセサリ"
+    },
+    "SUB_ENTERTAINMENT": {
+      "XBOX_GAMES": "Xbox とゲーム",
+      "PC_GAMES": "ゲーム",
+      "WINDOWS_DIGITAL_GAMES": "Windows ゲーム",
+      "MOVIES_AND_TV": "映画とテレビ番組"
+    },
+    "SUB_BUSINESS": {
+      "DADA_PLATFORM": "データ プラットフォーム"
+    },
+    "SUB_DEVELOPER_AND_IT": {
+      "WINDOWS_DEV_CENTER": "Windows アプリの開発"
+    },
+    "SUB_OTHER": {
+      "FREE_DOWNLOADS_AND_SECURITY": "無料ダウンロード & セキュリティ"
+    }
+  }

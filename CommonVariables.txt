@@ -1,0 +1,7 @@
+*** Variables ***
+${browser} =    chrome
+${shortPeriodOfTime} =    5s
+${normalPeriodOfTime} =    10s
+${longPeriodOfTime} =    15s
+${language} =    en-US
+${18nlanguageMapping} =    {'en-US':'United Kingdom - English', 'ja':'日本 - 日本語', 'ko':'대한민국 - 한국어', 'zh-CN':'中国 - 简体中文', 'zh-TW':'台灣 - 繁體中文', 'de-CH':'Schweiz - Deutsch'}
