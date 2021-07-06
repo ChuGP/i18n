@@ -1,0 +1,6 @@
+include i18n/listeners/languageFiles/zh-TW/*.json
+include i18n/listeners/languageFiles/en-US/*.json
+include i18n/listeners/languageFiles/de-CH/*.json
+include i18n/listeners/languageFiles/ja/*.json
+include i18n/listeners/languageFiles/ko/*.json
+include i18n/listeners/languageFiles/zh-CN/*.json

@@ -1,0 +1,90 @@
+*** Settings ***
+Library    Collections
+Library    SeleniumLibrary
+Library    ../self_util.py
+Resource    ../CommonVariables.txt
+
+*** Keywords ***
+Open Browser To Microsoft Page
+    ${microsoftUrl} =    Set Variable    https://www.microsoft.com/
+    ${microsoftLogo} =    Set Variable    //*[@id = 'uhfLogo']
+    Run Keywords    Open Browser    ${MicrosoftUrl}    ${browser}
+    ...             AND     Maximize Browser Window
+    ...             AND    Wait Until Element Is Visible    ${microsoftLogo}
+
+Click Element After It Is Visible
+    [Arguments]    ${locator}
+    Wait Until Page Contains Element    ${locator}    timeout=${shortPeriodOfTime}    error=${locator} should be visible.\n
+    Wait Until Element Is Visible    ${locator}    timeout=${shortPeriodOfTime}    error=${locator} should be visible.\n
+    Click Element    ${locator}
+
+Open Language Setting Menu
+    ${languageLink} =    Set Variable    //*[@id='locale-picker-link']
+    ${languageOptions} =    Set Variable    //*[contains(@class,'loc')]
+    Click Element After It Is Visible    ${languageLink}
+    Wait Until Element Is Visible    ${languageOptions}    timeout=${shortPeriodOfTime}
+
+Change Language
+    [Arguments]    ${expectedLanguage}
+    ${languageOption} =    Set Variable    //a[contains(normalize-space(),'${expectedLanguage}')]
+    ${changeToExpectedLanguage} =    Set Variable    xpath://*[contains(@class, 'global-head')]    #Change page and it will scroll top to header.
+    Scroll To The End
+    Open Language Setting Menu
+    Click Element After It Is Visible    ${languageOption}
+    Wait Until Element Is Visible    ${changeToExpectedLanguage}    timeout=${shortPeriodOfTime}
+
+Go To Office Page
+    ${officeButton} =    Set Variable    //*[text()='Office' and contains(@class, 'c-uhf-nav-link')]
+    Click Element After It Is Visible    ${officeButton}
+    Office Page Should Be Shown
+    Sleep    1S
+
+Office Page Should Be Shown
+    ${officePage} =    Set Variable    //*[contains(@class, 'm-image-intro')]
+    Wait Until Page Contains Element    ${officePage}    timeout=${shortPeriodOfTime}    error=Office Page should be visible.\n
+    Wait Until Element Is Visible    ${officePage}    timeout=${shortPeriodOfTime}    error=Office Page should be visible.\n
+
+Go To Support Page
+    Click Support Button
+    Support Page Should Be Shown
+    # Support 存在一詞多意問題要顯示在報表上
+
+Click Support Button
+    ${supportButton} =    Set Variable    //*[@id = 'l1_support' ]
+    Click Element After It Is Visible    ${supportButton}
+    # Support 存在一詞多意問題要顯示在報表上
+
+Support Page Should Be Shown
+    ${supportPage} =    Set Variable    //*[@id = 'uhfCatLogo']
+    Wait Until Page Contains Element    ${supportPage}    timeout=${shortPeriodOfTime}    error=Support Page should be visible.\n
+    Wait Until Element Is Visible    ${supportPage}    timeout=${shortPeriodOfTime}    error=Support Page should be visible.\n
+
+Get Text After It Is Visible
+    [Arguments]    ${locator}
+    Wait Until Page Contains Element    ${locator}    timeout=${normalPeriodOfTime}    error=Element should be visible.\n${locator}
+    Wait Until Element Is Visible    ${locator}    timeout=${normalPeriodOfTime}    error=Element should be visible.\n${locator}
+    ${text} =    Get Text    ${locator}
+    [Return]    ${text}
+
+Get Texts After Page Contain Element
+    [Arguments]    ${locator}
+    ${elements} =    Get WebElements After Page Contain Element    ${locator}
+    ${texts} =    Create List
+    FOR    ${element}    IN    @{elements}
+        Wait Until Page Contains Element    ${element}
+        ${text} =    Get Text    ${element}
+        Append To List    ${texts}    ${text}
+    END
+    [Return]    ${texts}
+
+Get WebElements After Page Contain Element
+    [Arguments]    ${locator}
+    Wait Until Page Contains Element    ${locator}    timeout=${shortPeriodOfTime}    error=Element should be visible.\n${locator}
+    ${elements} =    Get WebElements    ${locator}
+    [Return]    ${elements}
+
+Get WebElement After It Is Visible
+    [Arguments]    ${locator}
+    Wait Until Page Contains Element    ${locator}    timeout=${normalPeriodOfTime}    error=${locator} should be visible.\n
+    Wait Until Element Is Visible    ${locator}    timeout=${normalPeriodOfTime}    error={locator} should be visible.\n$
+    Run Keyword And Return    Get WebElement     ${locator}
